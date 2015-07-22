@@ -8,7 +8,19 @@
 </div>
 <div class="col-md-10">
     <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-users fa-fw"></i>&nbsp;List of Employees</div>
+        <div class="panel-heading clearfix">
+            <h5 class="pull-left"><span class="fa fa-users"></span>&nbsp;<strong>Employee List</strong></h5>
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa fa-wrench fa-fw"></span>&nbsp;Action <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-toggle="modal" data-target="#employeeModal">Add Record</a></li>
+                    <li><a href="#">Import Records</a></li>
+                    <li><a href="#">Export Records</a></li>                   
+                </ul>
+            </div>
+        </div>
         <div class="panel-body">
 
             <!-- Data Table Goes Here-->
@@ -498,3 +510,7 @@
         </div>
     </div>
 </div>
+
+<?php
+ include '/views/modals/employee-modal.php';
+?>

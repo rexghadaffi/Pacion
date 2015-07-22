@@ -14,6 +14,11 @@
             $('#example').DataTable();
         });
     </script>   
+	<style>
+	   body { 
+	   padding-top: 70px; 
+	   }
+	</style>
   </head>
   <body>
     <!-- Nav Header Goes Here... -->

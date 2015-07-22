@@ -3,13 +3,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Online Alumni</title>
-     <!-- Metro UI CSS-->
+    <title>TES</title>
+    <!-- Metro UI CSS-->
     <link href="shared-resources/Metro-UI/build/css/metro.css" rel="stylesheet" />
     <link href="shared-resources/Metro-UI/build/css/metro-icons.css" rel="stylesheet" />
-     <!-- Metro UI JS-->
+    <!-- Metro UI JS-->
+	<script src="shared-scripts/custom-js/jquery-1.9.1.min.js"></script>   
     <script src="shared-resources/Metro-UI/build/js/metro.js"></script>
-   
+
     <!-- Login Form  Snippets-->
     <style>
         .login-form {
@@ -27,6 +28,25 @@
         }
     </style>
     <script>
+
+        /*
+        * Do not use this is a google analytics fro Metro UI CSS
+        * */
+        if (window.location.hostname !== 'localhost') {
+
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-58849249-3', 'auto');
+            ga('send', 'pageview');
+
+        }
+
+
         $(function () {
             var form = $(".login-form");
 
@@ -39,30 +59,56 @@
             });
         });
     </script>
+    <script src="js/tes/user-alert.js"></script>
 </head>
-<body class="bg-cyan">
-    <div class="login-form padding20 block-shadow" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.5s; transition: 0.5s;">
-        <form>
-            <h2 class="text-light">Login</h2>
+<body>    
+	<div class="align-center padding0"  style="position:relative;top:30px">
+		  <img src="shared-resources/images/login-banner.jpg" alt="Mountain View" style="width:400px;height:125px;">        
+    </div>
+    <div class="login-form padding20 block-shadow bg-grayLighter" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.5s; transition: 0.5s;">
+        <form runat="server" id="form1" method="post">             
+            <h3 class="text-light">Sign In to STI Alumni</h3>
             <hr class="thin">
             <br>
-            <div class="input-control text full-size" data-role="input">
+            <div id="divusername" class="input-control text full-size" data-role="input">
                 <label for="user_login">Username:</label>
-                <input type="text" name="user_login" id="user_login" style="padding-right: 36px;">
+                <input type="text" name="user_login" id="txtUsername"
+                    runat="server"
+                    class="textclear"                   
+                    required
+                    data-role="popover"                 
+                    data-popover-shadow="true"
+                    data-popover-position="right"
+                    data-popover-text="please provide your username"
+                    data-popover-background="bg-red"
+                    data-popover-color="fg-white"
+                    style="padding-right: 36px;">
                 <button class="button helper-button clear" tabindex="-1" type="button"><span class="mif-cross"></span></button>
             </div>
             <br>
             <br>
-            <div class="input-control password full-size" data-role="input">
+            <div id="divpassword" class="input-control password full-size" data-role="input">
                 <label for="user_password">Password:</label>
-                <input type="password" name="user_password" id="user_password" style="padding-right: 36px;">
+                <input type="password"  name="user_password" id="txtPassword"                   
+                    runat="server"
+                    class="textclear"
+                    required
+                    data-role="popover"                                     
+                    data-popover-shadow="true"
+                    data-popover-position="right"
+                    data-popover-text="please provide your password"
+                    data-popover-background="bg-red"
+                    data-popover-color="fg-white"
+                     style="padding-right: 36px;">
                 <button class="button helper-button reveal" tabindex="-1" type="button"><span class="mif-looks"></span></button>
             </div>
             <br>
             <br>
             <div class="form-actions">
-                 <a href="Home.php" class="button primary">Sign In</a>                   
-                 <a href="#">Forgot Password?</a>              
+                <a  href="Home.php" id="btnLogin" onclick="ValidateLoginFields(event);" class="button primary">Sign In</a>
+                <div class="place-right">
+                    <a href="#">Forgot Password?</a>
+                </div>              
             </div>
         </form>
     </div>
@@ -82,12 +128,9 @@
     if (typeof (screen) != 'undefined') Cp += "&w=" + screen.width + "&h=" +
     screen.height + "&d=" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth);
     //--></script>
-        <script language="javascript" type="text/javascript"><!--
-    Cd.write("<img src='http://c.hit.ua/hit?i=136046&g=0&x=2" + Cp + Cr +
-    "&r=" + escape(Cd.referrer) + "&u=" + escape(window.location.href) +
-    "' border='0' wi" + "dth='1' he" + "ight='1'/>");
-    //--></script><img src="http://c.hit.ua/hit?i=136046&amp;g=0&amp;x=2&amp;s=1&amp;c=1&amp;t=-480&amp;j=1&amp;w=1024&amp;h=768&amp;d=24&amp;0.9228343926370144&amp;r=http%3A//metroui.org.ua/tabcontrol.html&amp;u=http%3A//metroui.org.ua/templates/login.html" border="0" width="1" height="1"></a>
-    <!-- / hit.ua -->
-    
+      
+
+    <!-- / hit.ua -->       
+        <script src="shared-scripts/custom-js/login-validation.js"></script>
 </body>
 </html>
