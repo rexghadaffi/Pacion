@@ -25,11 +25,11 @@
 					<i class="fa fa-cog fa-fw"></i> Settings 
 					<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="#">System Settings</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
             </ul>
