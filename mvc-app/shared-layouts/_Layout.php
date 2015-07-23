@@ -29,7 +29,7 @@
    
         <!-- Body Goes Here -->
 			 
-				      <?php include '_Table.php'; ?>				  
+			  
 			  
     <!-- END Container -->
   </body>

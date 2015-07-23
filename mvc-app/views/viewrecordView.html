@@ -1,16 +1,18 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>MVC</title>
 </head>
+
 <body>
-<?php include 'shared-layouts/_Layout.php'; ?>
+<form method="post">
 <div class="col-md-2">
     <div class="list-group">
         <a class="list-group-item" href="Home.php"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
         <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Posts</a>
-        <a class="list-group-item" href=""><i class="fa fa-pencil fa-fw"></i>&nbsp; Topics</a>
-        <a class="list-group-item" href="user%20record.php?control=viewrecord&func=listall"><i class="fa fa-wrench fa-fw"></i>&nbsp; Maintenance</a>
+        <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Topics</a>
+        <a class="list-group-item" href="#"><i class="fa fa-wrench fa-fw"></i>&nbsp; Maintenance</a>
     </div>
 </div>
 <div class="col-md-10">
@@ -22,7 +24,7 @@
                   <span class="fa fa-wrench fa-fw"></span>&nbsp;Action <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" data-toggle="modal" data-target="#userModal">Add Record</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#employeeModal">Add Record</a></li>
                     <li><a href="#">Import Records</a></li>
                     <li><a href="#">Export Records</a></li>                   
                 </ul>
@@ -53,17 +55,29 @@
                     </tr>
                 </tfoot>
                 <tbody>
+<?php 
+ foreach($cont as $c)
+	{
+		echo '<tr>';
+		echo '<td> '.$c["userID"].' </td>';
+		echo '<td> '.$c["userName"].' </td>';
+		echo '<td> '.$c["userPassword"].' </td>';
+		echo '<td> '.$c["userStatus"].' </td>';		
+		echo '<td> '.$c["userTypeID"].' </td>';
+		echo '<td><a href="editinfo.php?control=user&action=edit&id='.$c["userID"].'"><big>Edit</a></td>';		
+	 
+	}
 
+?>
                 </tbody>
             </table>
             <!-- End Data Table-->
 
+
         </div>
     </div>
 </div>
-<?php
- include '/views/modals/employee-modal.php';
-?>
+</form>
 </body>
 
 </html>

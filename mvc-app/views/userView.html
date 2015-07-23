@@ -1,16 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>MVC</title>
 </head>
+
 <body>
-<?php include 'shared-layouts/_Layout.php'; ?>
+<form method="post">
 <div class="col-md-2">
     <div class="list-group">
         <a class="list-group-item" href="Home.php"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
         <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Posts</a>
-        <a class="list-group-item" href=""><i class="fa fa-pencil fa-fw"></i>&nbsp; Topics</a>
-        <a class="list-group-item" href="user%20record.php?control=viewrecord&func=listall"><i class="fa fa-wrench fa-fw"></i>&nbsp; Maintenance</a>
+        <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Topics</a>
+        <a class="list-group-item" href="#"><i class="fa fa-wrench fa-fw"></i>&nbsp; Maintenance</a>
     </div>
 </div>
 <div class="col-md-10">
@@ -22,7 +25,7 @@
                   <span class="fa fa-wrench fa-fw"></span>&nbsp;Action <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" data-toggle="modal" data-target="#userModal">Add Record</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#employeeModal">Add Record</a></li>
                     <li><a href="#">Import Records</a></li>
                     <li><a href="#">Export Records</a></li>                   
                 </ul>
@@ -42,28 +45,47 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>User ID</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Status</th>
-                        <th>User type</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
-                <tbody>
+      <tfoot>
 
+      </tfoot>
+                <tbody>
+<?php
+ foreach($clientinfo as $client)
+ {	
+		echo '<tr>';
+		echo '<td><input type="hidden" name="userid"  value="'.$client["userID"].'" </td>';			
+		echo '<td><input type="text" name="username" value="'.$client["userName"].'" </td>';
+		echo '<td><input type="text" name="pass" value="'.$client["userPassword"].'" </td>';
+		echo '<td><input type="text" name="status" value="'.$client["userStatus"].'" </td>';
+		echo '<td><input type="text" name="usertype" value="'.$client["userTypeID"].'" </td>';
+		echo '<td><button name="editbutton" type="submit" class="btn-primary" style="float:right; margin-right: 90px;">Edit</button></td>';
+		echo '</tr>';
+ }
+ 
+ if(isset($_POST["editbutton"]))
+ {		
+		include_once 'controller/userControl.php';
+		$array = array(
+		"userName" => $_POST["username"],
+		"userPassword" => $_POST["pass"],
+		"userStatus" => $_POST["status"],
+		"userTypeID" => $_POST["usertype"]
+		);
+		$obj = new userControl;
+		$obj->updateinfo($array, "userID", $_POST["userid"]);		
+		
+ }
+?>
                 </tbody>
             </table>
             <!-- End Data Table-->
 
+
         </div>
     </div>
 </div>
-<?php
- include '/views/modals/employee-modal.php';
-?>
+</form>
 </body>
 
 </html>
+
