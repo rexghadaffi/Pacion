@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -19,17 +18,7 @@
 <div class="col-md-10">
     <div class="panel panel-default">
         <div class="panel-heading clearfix">
-            <h5 class="pull-left"><span class="fa fa-users"></span>&nbsp;<strong>Employee List</strong></h5>
-            <div class="btn-group pull-right">
-                <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="fa fa-wrench fa-fw"></span>&nbsp;Action <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#" data-toggle="modal" data-target="#employeeModal">Add Record</a></li>
-                    <li><a href="#">Import Records</a></li>
-                    <li><a href="#">Export Records</a></li>                   
-                </ul>
-            </div>
+            <h5 class="pull-left"><span class="fa fa-users"></span>&nbsp;<strong>Edit User Information</strong></h5>
         </div>
         <div class="panel-body">
 
@@ -37,7 +26,6 @@
             <table id="example" class="display" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>User ID</th>
                         <th>Username</th>
                         <th>Password</th>
                         <th>Status</th>
@@ -52,12 +40,16 @@
 <?php
  foreach($clientinfo as $client)
  {	
-		echo '<tr>';
-		echo '<td><input type="hidden" name="userid"  value="'.$client["userID"].'" </td>';			
-		echo '<td><input type="text" name="username" value="'.$client["userName"].'" </td>';
-		echo '<td><input type="text" name="pass" value="'.$client["userPassword"].'" </td>';
-		echo '<td><input type="text" name="status" value="'.$client["userStatus"].'" </td>';
-		echo '<td><input type="text" name="usertype" value="'.$client["userTypeID"].'" </td>';
+		echo '<tr>';			
+		echo '<td><input type="text" name="username" value="'.$client["userName"].'"><input type="hidden" name="userid"  value="'.$client["userID"].'"></td>';
+		echo '<td><input type="text" name="pass" value="'.$client["userPassword"].'"> </td>';
+		echo '<td><input type="text" name="fname" value="'.$client["userFirstName"].'"> </td>';
+		echo '<td><input type="text" name="lname" value="'.$client["userLastName"].'"> </td>';
+		echo '<td><input type="text" name="contact" value="'.$client["userContactNum"].'"> </td>';
+		echo '<td><input type="text" name="address" value="'.$client["userAddress"].'"> </td>';
+		echo '<td><input type="text" name="email" value="'.$client["userEmail"].'"> </td>';
+		echo '<td><input type="text" name="status" value="'.$client["userStatus"].'"> </td>';
+		echo '<td><input type="text" name="usertype" value="'.$client["userTypeID"].'"> </td>';
 		echo '<td><button name="editbutton" type="submit" class="btn-primary" style="float:right; margin-right: 90px;">Edit</button></td>';
 		echo '</tr>';
  }
@@ -68,12 +60,16 @@
 		$array = array(
 		"userName" => $_POST["username"],
 		"userPassword" => $_POST["pass"],
+		"userFirstName" => $_POST["fname"],
+		"userLastName" => $_POST["lname"],
+		"userContactNum" => $_POST["contact"],	
+		"userAddress" => $_POST["address"],
+		"userEmail" => $_POST["email"],	
 		"userStatus" => $_POST["status"],
 		"userTypeID" => $_POST["usertype"]
 		);
 		$obj = new userControl;
-		$obj->updateinfo($array, "userID", $_POST["userid"]);		
-		
+		$obj->updateinfo($array, "userID", $_POST["userid"]);			
  }
 ?>
                 </tbody>
