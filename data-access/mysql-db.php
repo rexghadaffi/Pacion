@@ -1,4 +1,4 @@
-<?
+<?php
 
 class DataAccessLayer
 {
@@ -6,7 +6,7 @@ class DataAccessLayer
     private $_server = 'localhost';
     private $_username = 'root';
     private $_password = '';
-    private $_database = 'stiamuni';
+    private $_database = 'db_alumni';
     public  $debug = false;
  
     
@@ -467,3 +467,4 @@ class DataAccessLayer
         return $this->_conn->affected_rows;
     }
 }
+?>
