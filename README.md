@@ -1,4 +1,4 @@
-# Nag mamakaawa ako sa inyo, PLEASE FOLLOW NAMING CONVENTION:
+# PLEASE FOLLOW NAMING CONVENTION:
 
 1.) Filename = all letters lowercase, in case of multiple words use this template
     
