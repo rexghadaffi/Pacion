@@ -4,19 +4,17 @@
 * 
 */
 
-include_once "views/view_class.php";
+include_once "../views/view-class.php";
 
-class clientClass
-{
-	
+class ControlClass 
+{	
 	public function __construct()
 	{
 		# code...
 		$name=$_GET["control"]."Control";
 		include $name.".php";
 		$obj= new $name;
-		$obj->$_GET["action"]();
-	}
+		$obj->$_GET["func"]();
+	}	
 }
-
 ?>

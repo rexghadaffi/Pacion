@@ -1,6 +1,6 @@
 <?php
-include 'shared-layouts/_Layout.php';
-include "../mvc-app/controller/clientClass.php";
+include 'shared-layouts/-Layout.php';
+include "../controller/client-class.php";
 
 new clientClass();
 

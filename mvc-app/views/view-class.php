@@ -10,7 +10,7 @@ class ViewClass
 	function show()
 	{
 		extract($this->arr);
-		include_once "views/".$_GET['control']."View.html";
+		include_once "../views/".$_GET['control']."View.html";
 	}
 
 	function assign($name, $value)
