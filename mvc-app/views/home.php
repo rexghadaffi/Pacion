@@ -21,7 +21,11 @@
     </div>
 </div>
 <?php
+<<<<<<< HEAD
  include '/modals/client-user.php';
+=======
+ include '/modals/client_user.php';
+>>>>>>> origin/master
 ?>
 </body>
 

@@ -1,5 +1,5 @@
 <?php
-class viewrecordControl extends ViewClass
+class view_record extends ClientViewClass
 {
 	function listall()
 	{
