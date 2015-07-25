@@ -105,11 +105,7 @@
             <br>
             <br>
             <div class="form-actions">
-<<<<<<< HEAD
                 <a  href="views/home.php" id="btnLogin" onclick="ValidateLoginFields(event);" class="button primary">Sign In</a>
-=======
-                <a  href="home.php" id="btnLogin" onclick="ValidateLoginFields(event);" class="button primary">Sign In</a>
->>>>>>> origin/master
                 <div class="place-right">
                     <a href="#">Forgot Password?</a>
                 </div>              
