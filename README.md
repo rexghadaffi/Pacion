@@ -3,10 +3,10 @@
 1.) Filename = all letters lowercase, in case of multiple words use this template
     
     user.php
-    user-type.php
-    user-form-validation.js
-    user-model.php
-    user-custom-style.css
+    user_type.php
+    user_form-validation.js
+    user_model.php
+    user_custom-style.css
     
 2.) Variables (class members) = use camel casing 
 
