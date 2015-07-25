@@ -1,5 +1,5 @@
 <!-- Employee Form Sample -->
-<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #87CEFA">
@@ -10,7 +10,7 @@
 		  <div class="modal-body">
 	    	<div class="form-group">
 				<label for="txtusername">Username</label>
-				<input type="text" class="form-control" name="txtusername" placeholder="Username">
+				<input type="text"  class="form-control" name="txtusername" onkeypress="Numeric(event);" placeholder="Username">
 			</div>
 			
 			<div class="form-group">
@@ -52,13 +52,6 @@
 					<option>2</option>
 				</select>
 			</div>						
-		
-			<div class="form-group">
-				<label for="exampleInputFile">Browse Profile Picture</label>
-				<input type="file" id="exampleInputFile">
-				<p class="help-block">Example block-level help text here.</p>
-			</div>
-			
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
