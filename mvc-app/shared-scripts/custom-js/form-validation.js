@@ -4,14 +4,30 @@ function Numeric(e) {
     if (window.event) // IE 
     {
         if ((e.keyCode < 48 || e.keyCode > 57) & e.keyCode != 8 & e.keyCode != 45) {
-            alert('hehehe');
+             $(this).notifyMe(
+        'bottom', // Position
+        'error', // Type
+        'Lorem Ipsum Text', // Title
+        'Lorem Ipsum is simply dummy text of the printing',
+		200,
+		2000// Description
+      
+    );
             event.returnValue = false;
             return false;
         }
     }
     else { // Fire Fox
         if ((e.which < 48 || e.which > 57) & e.which != 8 & e.keyCode != 45) {
-            alert('wrong number');
+             $(this).notifyMe(
+        'bottom', // Position
+        'error', // Type
+        'Lorem Ipsum Text', // Title
+        'Lorem Ipsum is simply dummy text of the printing',
+		200,
+		2000// Description
+      
+    );
             e.preventDefault();
             return false;
 
@@ -25,7 +41,15 @@ function Alphabet(e) {
     if (regex.test(str)) {
         return true;
     }
-    alert('wrong letter');
+     $(this).notifyMe(
+        'bottom', // Position
+        'error', // Type
+        'Lorem Ipsum Text', // Title
+        'Lorem Ipsum is simply dummy text of the printing',
+		200,
+		2000// Description
+      
+    );
     e.preventDefault();
     return false;
 }
