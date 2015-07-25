@@ -1,3 +1,14 @@
+# ---- TASK ALLOCATION ----
+
+# REGGIE
+   - tblactivity, tbljoboffer, tbljob, tblcompanyadmin, tblusertype ADD/EDIT/FETCH
+# DANIEL
+   - LOGIN, HTACCESS. 
+# JHUN
+   - tblcompanyuser, tblpost, tbltopic, tblforumcategory ADD/EDIT/FETCH
+# REX
+   - UI/UX
+
 # PLEASE FOLLOW NAMING CONVENTION:
 
 1.) Filename = all letters lowercase, in case of multiple words use this template
