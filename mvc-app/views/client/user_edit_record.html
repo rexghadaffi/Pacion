@@ -1,87 +1,56 @@
-﻿<div class="col-md-7">
+﻿<div class="col-md-10">
     <div class="panel panel-default">
-        <div class="panel-body">
+        <div class="panel-body">		  
+			<legend><h3>Create New Client</h2></legend>
 <form method="post">
-<!-- BS FORM -->
-		<div class="modal-body">
+<!-- BS FORM -->		
 <?php foreach($clientinfo as $client)
  {	?>		
-	    	<div class="form-group">
-				<label for="txtusername">Username</label>
-				<input type="hidden" class="form-control" name="txtid" value="<?php echo $client["userID"]; ?>" />
+			<input type="hidden" class="form-control" name="txtid" value="<?php echo $client["userID"]; ?>" />
+	    	<div class="form-group col-md-4">				
+				<label for="txtusername">Username</label>				
 				<input type="text" class="form-control" name="txtusername" value="<?php echo $client["userName"]; ?>" />
-			</div>
-			
-	    	<div class="form-group">
+			</div>			
+	    	<div class="form-group col-md-4">
 				<label for="txtpassword">Password</label>
 				<input type="text" class="form-control" name="txtpassword" value="<?php echo $client["userPassword"]; ?>">
 			</div>		
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="txtfname">First Name</label>
 				<input type="text" class="form-control" name="txtfname" value="<?php echo $client["userFirstName"]; ?>">
 			</div>	
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="txtlname">Last Name</label>
 				<input type="text" class="form-control" name="txtlname" value="<?php echo $client["userLastName"]; ?>">
 			</div>
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="txtcontact">Contact Number</label>
 				<input type="text" class="form-control" name="txtcontact" value="<?php echo $client["userContactNum"]; ?>">
 			</div>	
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="txtaddress">Address</label>
 				<input type="text" class="form-control" name="txtaddress" value="<?php echo $client["userAddress"]; ?>">
 			</div>		
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="txtemail">E-mail</label>
 				<input type="text" class="form-control" name="txtemail" value="<?php echo $client["userEmail"]; ?>">
 			</div>
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="cbostatus">Status</label>
 				<input type="text" class="form-control" name="cbostatus">
 			</div>	
 
-	    	<div class="form-group">
+	    	<div class="form-group col-md-4">
 				<label for="cbousertype">User Type</label>
 				<input type="text" class="form-control" name="cbousertype">
 			</div>			
-			
-	    	<div class="form-group">
-				<button type="submit" class="btn btn-primary" name="btnedit">Edit</button>
-			</div>				
-			
-		</div>	
 <?php } ?>
-		
-<!-- END BS FORM -->
-
-            <!-- Data Table Goes Here-->
-<?php
-/* 
- foreach($clientinfo as $client)
- {	
-		echo '<tr>';	
-		echo '<td><input type="hidden" name="userid" value="'.$client["userID"].'" </td>';		
-		echo '<td><input type="text" name="username" value="'.$client["userName"].'" </td>';
-		echo '<td><input type="text" name="pass" value="'.$client["userPassword"].'" </td>';
-		echo '<td><input type="text" name="fname" value="'.$client["userFirstName"].'" </td>';
-		echo '<td><input type="text" name="lname" value="'.$client["userLastName"].'" </td>';
-		echo '<td><input type="text" name="contact" value="'.$client["userContactNum"].'" </td>';
-		echo '<td><input type="text" name="address" value="'.$client["userAddress"].'" </td>';
-		echo '<td><input type="text" name="email" value="'.$client["userEmail"].'" </td>';
-		echo '<td><input type="text" name="status" value="'.$client["userStatus"].'" </td>';
-		echo '<td><input type="text" name="usertype" value="'.$client["userTypeID"].'" </td>';
-		echo '<td><button name="editbutton" type="submit" class="btn-primary" style="float:right; margin-right: 90px;">Edit</button></td>';
-		echo '</tr>';
- }
-*/
-?>
 
 <?php
  if(isset($_POST["btnedit"]))
@@ -108,5 +77,15 @@
 </form>			
             <!-- End Data Table-->
         </div>
+		 <div class="panel-footer clearfix">
+		   <div class="pull-right">
+				<button type="button" class="btn btn-sm btn-default">
+                  <span class="fa fa-times fa-fw"></span>&nbsp;Cancel
+                </button> 				
+                <button type="button" class="btn btn-sm btn-success">
+                  <span class="fa fa-floppy-o fa-fw"></span>&nbsp;Save
+                </button>               
+            </div>         
+		 </div>
     </div>
 </div>
