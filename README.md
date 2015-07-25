@@ -2,10 +2,13 @@
 
 # REGGIE
    - tblactivity, tbljoboffer, tbljob, tblcompanyadmin, tblusertype ADD/EDIT/FETCH
+
 # DANIEL
    - LOGIN, HTACCESS. 
+
 # JHUN
    - tblcompanyuser, tblpost, tbltopic, tblforumcategory ADD/EDIT/FETCH
+
 # REX
    - UI/UX
 
