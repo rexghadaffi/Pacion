@@ -20,7 +20,7 @@
 	   }
 	</style>
   </head>
-  <body>
+  <body style="font-style:calibri;font-size:12px">
     
     <!-- Nav Header Goes Here... -->
     <?php include '_admin-navbar.php';  include '_admin-sidebar.php'; ?>  	 
