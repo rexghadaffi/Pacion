@@ -10,7 +10,7 @@
    - tblcompanyuser, tblpost, tbltopic, tblforumcategory ADD/EDIT/FETCH
 
 # REX
-   - UI/UX
+   - UI/UX, client side validation, notify me
 
 # PLEASE FOLLOW NAMING CONVENTION:
 
