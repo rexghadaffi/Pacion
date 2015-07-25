@@ -1,5 +1,5 @@
 <?php
-class admin_edit_record extends ClientViewClass
+class admin_edit_record extends AdminViewClass
 {
 
 	function edit()

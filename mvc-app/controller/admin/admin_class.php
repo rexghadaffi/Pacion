@@ -6,7 +6,7 @@
 
 include_once "../views/view_class.php";
 
-class userClass
+class adminClass
 {	
 	public function __construct()
 	{
