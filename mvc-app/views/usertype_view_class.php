@@ -3,14 +3,14 @@
 /**
 * 
 */
-class ClientViewClass
+class UserTypeViewClass
 {
 	public $arr=array();
 	
 	function show()
 	{
 		extract($this->arr);
-		include_once "../views/client/".$_GET['control'].".html";
+		include_once "../views/usertype/".$_GET['control'].".html";
 	}
 
 	function assign($name, $value)
@@ -23,7 +23,5 @@ class ClientViewClass
 		$this->show();
 	}
 }
-
-
 
 ?>

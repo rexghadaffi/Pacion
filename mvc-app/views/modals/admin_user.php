@@ -50,7 +50,7 @@
 		"userStatus" => 1,
 		"userTypeID" => $_POST["cbousertype"]
 		);
-		echo $array;
+		
 		$obj = new admin_edit_record;
 		$obj->create($array);	
 		

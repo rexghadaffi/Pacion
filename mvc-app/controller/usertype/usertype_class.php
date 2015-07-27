@@ -4,9 +4,9 @@
 * 
 */
 
-include_once "../views/admin_view_class.php";
+include_once "../views/usertype_view_class.php";
 
-class adminClass
+class userTypeClass
 {	
 	public function __construct()
 	{
