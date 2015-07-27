@@ -13,7 +13,7 @@ class admin_edit_record extends AdminViewClass
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;		
-		$obj->updateWhere("tblcampanyuser", $clientarr, $column, $id);	
+		$obj->updateWhere("tblcompanyuser", $clientarr, $column, $id);	
 	}
 	
 	public function create($clientarr)

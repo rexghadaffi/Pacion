@@ -64,7 +64,6 @@
 		"userStatus" => $_POST["userstatus"],
 		"userTypeID" => $_POST["cbousertype"]
 		);
-		echo $array;
 		$obj = new admin_edit_record;
 		$obj->updateinfo($array, "userID", $_POST["txtid"]);
 		
