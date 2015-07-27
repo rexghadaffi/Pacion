@@ -61,18 +61,18 @@
 		$array = array(
 		"userName" => $_POST["txtusername"],
 		"userPassword" => $_POST["txtpassword"],
-		"userStatus" => $_POST["cbostatus"],
+		"userStatus" => $_POST["userstatus"],
 		"userTypeID" => $_POST["cbousertype"]
 		);
+		echo $array;
 		$obj = new admin_edit_record;
-		$obj->updateinfo($array, "userID", $_POST["txtid"]);		
+		$obj->updateinfo($array, "userID", $_POST["txtid"]);
+		
  }
 ?>
-
-                </tbody>
-            </table>
+              
 </form>			
-            <!-- End Data Table-->
+            
         </div>
     </div>
 </div>

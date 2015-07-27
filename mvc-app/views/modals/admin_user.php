@@ -1,5 +1,5 @@
 <!-- Employee Form Sample -->
-<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #87CEFA">
@@ -17,9 +17,7 @@
 				<label for="txtpassword">Password</label>
 				<input type="password" class="form-control" name="txtpassword" placeholder="Password">
 			</div>
-			
-			
-			
+						
 			<div class="form-group">
 				<label for="cbousertype">User Type</label>
 				<select type="" class="form-control" name="cbousertype">
@@ -38,13 +36,13 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-			<button type="button" class="btn btn-success" name="btnadd">Add New</button>
+			<button type="submit" class="btn btn-success" name="btnadd">Add New</button>
 		  </div>
 <?php		  
  if(isset($_POST["btnadd"]))
  {		
 
-		include_once 'controller/userControl.php';
+		include_once '../controller/admin/admin_edit_record.php';
 		$array = array(
 		"userID" => "null",
 		"userName" => $_POST["txtusername"],
@@ -53,8 +51,9 @@
 		"userTypeID" => $_POST["cbousertype"]
 		);
 		echo $array;
-		$obj = new userControl;
-		$obj->create($array);			
+		$obj = new admin_edit_record;
+		$obj->create($array);	
+		
  }
 ?>		  
 	  </form>
