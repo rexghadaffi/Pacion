@@ -1,5 +1,5 @@
 <!-- Employee Form Sample -->
-<div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="usertypeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #87CEFA">
@@ -35,4 +35,5 @@
 	  </form>
     </div>
   </div>
+</div>
 </div>
