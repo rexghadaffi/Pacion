@@ -48,8 +48,8 @@
 				<label for="cbousertype">User Type</label>
 				<select type="" class="form-control" name="cbousertype">
 					<option>Select</option>
-					<option>1</option>
-					<option>2</option>
+					<option value="1">Admin</option>
+					<option value="0">Faculty</option>
 				</select>
 			</div>						
 		  </div>

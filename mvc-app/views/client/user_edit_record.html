@@ -41,19 +41,43 @@
 				<input type="text" class="form-control" name="txtemail" value="<?php echo $client["userEmail"]; ?>">
 			</div>
 
-	    	<div class="form-group col-md-4">
-				<label for="cbostatus">Status</label>
-				<input type="text" class="form-control" name="cbostatus">
+			<div class="form-group col-md-4">
+				<label for="cbousertype">Status</label>
+				<select type="" class="form-control" name="cbostatus" >
+					<option><?php echo $client["userStatus"]; ?></option>
+					<option value="0">Active</option>
+					<option value="1">Inactive</option>
+				</select>
 			</div>	
 
-	    	<div class="form-group col-md-4">
+			<div class="form-group col-md-4">
 				<label for="cbousertype">User Type</label>
-				<input type="text" class="form-control" name="cbousertype">
-			</div>			
+				<select type="" class="form-control" name="cbousertype">
+					<option><?php echo $client["userTypeID"]; ?></option>
+					<option value="0">Company User</option>
+					<option value="1">Alumni</option>
+				</select>
+			</div>				
+		
 <?php } ?>
 
-<?php
- if(isset($_POST["btnedit"]))
+                </tbody>
+            </table>
+		
+            <!-- End Data Table-->
+        </div>
+		 <div class="panel-footer clearfix">
+		   <div class="pull-right">
+				<button type="button" class="btn btn-sm btn-default">
+                  <span class="fa fa-times fa-fw"></span>&nbsp;Cancel
+                </button> 				
+                <button type="submit" name="btn-edit" class="btn btn-sm btn-success">
+                  <span class="fa fa-floppy-o fa-fw"></span>&nbsp;Save
+                </button>               
+            </div>         
+		 </div>
+    </div><?php
+ if(isset($_POST["btn-edit"]))
  {		
 		include_once '../controller/client/user_edit_record.php';
 		$array = array(
@@ -71,21 +95,4 @@
 		$obj->updateinfo($array, "userID", $_POST["txtid"]);		
  }
 ?>
-
-                </tbody>
-            </table>
-</form>			
-            <!-- End Data Table-->
-        </div>
-		 <div class="panel-footer clearfix">
-		   <div class="pull-right">
-				<button type="button" class="btn btn-sm btn-default">
-                  <span class="fa fa-times fa-fw"></span>&nbsp;Cancel
-                </button> 				
-                <button type="button" name="btn-edit" class="btn btn-sm btn-success">
-                  <span class="fa fa-floppy-o fa-fw"></span>&nbsp;Save
-                </button>               
-            </div>         
-		 </div>
-    </div>
-</div>
+</form>	
