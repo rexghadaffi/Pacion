@@ -5,7 +5,7 @@ class edit_category extends CategoryViewClass
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;	
-		$this->assign("categories", $obj->selectById("tblforumcategory", "userID", $_GET["id"]));		
+		$this->assign("forumcategory", $obj->selectById("tblforumcategory", "forumCatID", $_GET["id"]));		
 	}
 	
 	public function updateinfo($clientarr, $column, $id)

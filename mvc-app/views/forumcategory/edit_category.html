@@ -2,26 +2,24 @@
 <div class="col-md-10">
     <div class="panel panel-default">
         <div class="panel-body">		  
-			<legend><h3>Create New Client</h2></legend>
+			<legend><h3>Edit Category</h2></legend>
 <form method="post">
 <!-- BS FORM -->		
-<?php foreach($clientinfo as $client)
+<?php foreach($forumcategory as $category)
  {	?>		
-			<input type="hidden" class="form-control" name="txtid" value="<?php echo $client[""]; ?>" />
-	    	<div class="form-group col-md-4">				
-				<label for="txtusername">Username</label>				
-				<input type="text" class="form-control" name="txtusername" value="<?php echo $client[""]; ?>" />
-			</div>			
-	    	<div class="form-group col-md-4">
-				<label for="txtpassword">Password</label>
-				<input type="text" class="form-control" name="txtpassword" value="<?php echo $client[""]; ?>">
-			</div>		
-
-	    	<div class="form-group col-md-4">
-				<label for="txtfname">First Name</label>
-				<input type="text" class="form-control" name="txtfname" value="<?php echo $client[""]; ?>">
+			<input type="hidden" class="form-control" name="txtid" value="<?php echo $category["forumCatID"]; ?>" />
+	    	<div class="form-group col-md-8">				
+				<label for="txtcattitle">Title</label>				
+				<input type="text" class="form-control" name="txtcattitle" value="<?php echo $category["forumCatTitle"]; ?>" />
 			</div>	
-
+			
+	    	<div class="form-group col-md-8">
+				<label for="txtcatdesc">Deccription</label>			
+				<textarea rows="4" name="txtcatdesc" class="form-control">
+				<?php echo $category["forumCatDesc"]; ?>
+				</textarea>
+			</div>	
+				
 <!--
 			<div class="form-group col-md-4">
 				<label for="cbousertype">User Type</label>
@@ -52,14 +50,13 @@
     </div><?php
  if(isset($_POST["btn-edit"]))
  {		
-		include_once '../controller/client/user_edit_record.php';
+		include_once '../controller/forumcategory/edit_category.php';
 		$array = array(
-		"userName" => $_POST[""],
-		"userPassword" => $_POST[""],
-		"userFirstName" => $_POST[""]
+		"forumCatTitle" => $_POST["txtcattitle"],
+		"forumCatDesc" => $_POST["txtcatdesc"]
 		);
-		$obj = new user_edit_record;
-		$obj->updateinfo($array, "userID", $_POST[""]);	
+		$obj = new edit_category;
+		$obj->updateinfo($array, "forumCatID", $_POST["txtid"]);	
  }
 ?>
 </form>	
