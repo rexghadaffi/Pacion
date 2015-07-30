@@ -39,20 +39,13 @@ include '../shared-layouts/_layout.php';
                 </tfoot>
                 <tbody>
 <?php 
- foreach($cont as $c)
+ foreach($forumcategory as $cat)
 	{
 		echo '<tr>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';
-		echo '<td> '.$c[""].' </td>';		
-		echo '<td> '.$c[""].' </td>';
-		echo '<td><a href=".php?control=edit_category&func=edit&id='.$c[""].'"><big>Edit</a></td>';	
+		echo '<td> '.$cat[""].' </td>';
+		echo '<td> '.$cat[""].' </td>';
+		echo '<td> '.$cat[""].' </td>';
+		echo '<td><a href=".php?control=edit_category&func=edit&id='.$cat[""].'"><big>Edit</a></td>';	
 		echo '</tr>';		
 	}
 ?>
