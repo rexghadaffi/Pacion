@@ -55,13 +55,12 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-			<button type="button" class="btn btn-success" name="btnadd">Add New</button>
+			<button type="submit" class="btn btn-success" name="btn-add">Add New</button>
 		  </div>
 <?php		  
- if(isset($_POST["btnadd"]))
+ if(isset($_POST["btn-add"]))
  {		
-
-		include_once 'controller/userControl.php';
+		include_once '../controller/client/user_edit_record.php';
 		$array = array(
 		"userID" => "null",
 		"userName" => $_POST["txtusername"],
@@ -75,7 +74,7 @@
 		"userTypeID" => $_POST["cbousertype"]
 		);
 		echo $array;
-		$obj = new userControl;
+		$obj = new user_edit_record.php;
 		$obj->create($array);			
  }
 ?>		  
