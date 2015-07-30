@@ -1,7 +1,6 @@
 <?php
 class usertype_edit_record extends UserTypeViewClass
 {
-
 	function edit()
 	{
 		include_once "../../data-access/mysql-db.php";
@@ -16,13 +15,12 @@ class usertype_edit_record extends UserTypeViewClass
 		$obj->updateWhere("tblusertype", $clientarr, $column, $id);	
 	}
 	
-	public function create($clientarr)
+	public function create($typearr)
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;		
-		$obj->insert("tblusertype", $clientarr);	
+		$obj->insert("tblusertype", $typearr);	
 	}
 	
 }
-
 ?>

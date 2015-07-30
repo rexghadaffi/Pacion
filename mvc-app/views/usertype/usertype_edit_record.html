@@ -1,4 +1,8 @@
-﻿<div class="col-md-7">
+﻿<?php 
+include '../shared-layouts/_layout.php';
+include '../views/modals/addusertype.php';
+?>
+<div class="col-md-7">
     <div class="panel panel-default">
         <div class="panel-body">
 <form method="post">
@@ -19,24 +23,6 @@
 		</div>	
 <?php } ?>
 		
-<!-- END BS FORM -->
-
-            <!-- Data Table Goes Here-->
-<?php
-/* 
- foreach($clientinfo as $client)
- {	
-		echo '<tr>';	
-		echo '<td><input type="hidden" name="userid" value="'.$client["userID"].'" </td>';		
-		echo '<td><input type="text" name="username" value="'.$client["userName"].'" </td>';
-		echo '<td><input type="text" name="pass" value="'.$client["userPassword"].'" </td>';
-		echo '<td><input type="text" name="fname" value="'.$client["userStatus"].'" </td>';
-		echo '<td><input type="text" name="usertype" value="'.$client["userTypeID"].'" </td>';
-		echo '<td><button name="editbutton" type="submit" class="btn-primary" style="float:right; margin-right: 90px;">Edit</button></td>';
-		echo '</tr>';
- }
-*/
-?>
 
 <?php
  if(isset($_POST["btnedit"]))
@@ -56,3 +42,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>
