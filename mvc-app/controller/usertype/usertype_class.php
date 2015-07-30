@@ -15,6 +15,7 @@ class userTypeClass
 		include $name.".php";
 		$obj= new $name;
 		$obj->$_GET["func"]();
+		
 	}
 }
 ?>
