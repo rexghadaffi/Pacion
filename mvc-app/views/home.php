@@ -1,3 +1,4 @@
+
 <?php include '../shared-layouts/_Layout.php'; ?>
 
 <div class="col-md-10">
@@ -25,11 +26,3 @@
         </div>
     </div>
 </div>
-<?php
- include '/modals/client_user.php';
-?>
-
-
-</body>
-
-</html>

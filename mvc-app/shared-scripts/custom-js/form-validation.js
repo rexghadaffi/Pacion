@@ -7,8 +7,8 @@ function Numeric(e) {
              $(this).notifyMe(
         'bottom', // Position
         'error', // Type
-        'Lorem Ipsum Text', // Title
-        'Lorem Ipsum is simply dummy text of the printing',
+        'Invalid Input', // Title
+        'You cannot use aplhanumeric in this field',
 		200,
 		2000// Description
       
@@ -22,8 +22,8 @@ function Numeric(e) {
              $(this).notifyMe(
         'bottom', // Position
         'error', // Type
-        'Lorem Ipsum Text', // Title
-        'Lorem Ipsum is simply dummy text of the printing',
+        'Invalid Input', // Title
+        'You cannot use aplhanumeric in this field',
 		200,
 		2000// Description
       

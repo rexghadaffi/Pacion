@@ -8,37 +8,37 @@
       </div>
 	   <form method="post">
 		  <div class="modal-body">
-	    	<div class="form-group">
+	    	<div class="form-group col-md-6">
 				<label for="txtusername">Username</label>
 				<input type="text"  class="form-control" name="txtusername" onkeypress="Numeric(event);" placeholder="Username">
 			</div>
 			
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtpassword">Password</label>
 				<input type="password" class="form-control" name="txtpassword" placeholder="Password">
 			</div>
 			
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtfname">First Name</label>
 				<input type="text" class="form-control" name="txtfname" placeholder="First Name">
 			</div>
 			
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtlname">Last Name</label>
 				<input type="text" class="form-control" name="txtlname" placeholder="Last Name">
 			</div>			
 			
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtaddress">Home Address</label>
 				<input type="text" class="form-control" name="txtaddress" placeholder="Address">
 			</div>
 
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtcontact">Contact Number</label>
 				<input type="text" class="form-control" name="txtcontact" placeholder="Contact Number">
 			</div>
 			
-			<div class="form-group">
+			<div class="form-group col-md-6">
 				<label for="txtemail">E-mail Address</label>
 				<input type="email" class="form-control" name="txtemail" placeholder="E-mail">
 
