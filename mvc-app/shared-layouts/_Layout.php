@@ -13,10 +13,12 @@
 	<style>
 	   body { 
 	   padding-top: 70px; 
+	   font-style:calibri;
+	   font-size:12px;
 	   }
 	</style>
   </head>
-  <body style="font-style:calibri;font-size:12px">
+  <body>
     
     <!-- Nav Header Goes Here... -->
     <?php include '_admin-navbar.php';  include '_admin-sidebar.php'; ?>  	 

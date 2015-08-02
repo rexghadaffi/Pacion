@@ -24,14 +24,35 @@ class ClientViewClass
 	}
 }
 
-class AdminViewClass
+class CategoryViewClass
 {
 	public $arr=array();
 	
 	function show()
 	{
 		extract($this->arr);
-		include_once "../views/admin/".$_GET['control'].".html";
+		include_once "../views/forumcategory/".$_GET['control'].".html";
+	}
+
+	function assign($name, $value)
+	{
+		$this->arr[$name]=$value;
+	}
+
+	public function __destruct()
+	{		
+		$this->show();
+	}
+}
+
+class PostViewClass
+{
+	public $arr=array();
+	
+	function show()
+	{
+		extract($this->arr);
+		include_once "../views/post/".$_GET['control'].".html";
 	}
 
 	function assign($name, $value)

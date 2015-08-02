@@ -1,28 +1,26 @@
 <?php
-class admin_edit_record extends AdminViewClass
+class usertype_edit_record extends UserTypeViewClass
 {
-
 	function edit()
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;	
-		$this->assign("clientinfo", $obj->selectById("tblcompanyuser", "userID", $_GET["id"]));		
+		$this->assign("clientinfo", $obj->selectById("tblusertype", "typeID", $_GET["id"]));		
 	}
 	
 	public function updateinfo($clientarr, $column, $id)
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;		
-		$obj->updateWhere("tblcompanyuser", $clientarr, $column, $id);	
+		$obj->updateWhere("tblusertype", $clientarr, $column, $id);	
 	}
 	
-	public function create($clientarr)
+	public function create($typearr)
 	{
 		include_once "../../data-access/mysql-db.php";
 		$obj=new DataAccessLayer;		
-		$obj->insert("tblcompanyuser", $clientarr);	
+		$obj->insert("tblusertype", $typearr);	
 	}
 	
 }
-
 ?>

@@ -26,3 +26,15 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+<?php
+ include '/modals/client_user.php';
+
+?>
+
+
+</body>
+
+</html>
+>>>>>>> origin/master

@@ -1,4 +1,7 @@
-﻿<div class="col-md-7">
+﻿<?php
+include '../shared-layouts/_Layout.php';
+?>
+<div class="col-md-7">
     <div class="panel panel-default">
         <div class="panel-body">
 <form method="post">
@@ -61,18 +64,17 @@
 		$array = array(
 		"userName" => $_POST["txtusername"],
 		"userPassword" => $_POST["txtpassword"],
-		"userStatus" => $_POST["cbostatus"],
+		"userStatus" => $_POST["userstatus"],
 		"userTypeID" => $_POST["cbousertype"]
 		);
 		$obj = new admin_edit_record;
-		$obj->updateinfo($array, "userID", $_POST["txtid"]);		
+		$obj->updateinfo($array, "userID", $_POST["txtid"]);
+		
  }
 ?>
-
-                </tbody>
-            </table>
+              
 </form>			
-            <!-- End Data Table-->
+            
         </div>
     </div>
 </div>

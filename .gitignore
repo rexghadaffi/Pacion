@@ -41,3 +41,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.php
+mvc-app/views/admin/admin_edit_record.html
+*.html
+mvc-app/shared-layouts/_Layout.php
+*.php
